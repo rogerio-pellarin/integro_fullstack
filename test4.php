@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 function eliminar_tildes($string){
 
     //Ahora reemplazamos las letras
