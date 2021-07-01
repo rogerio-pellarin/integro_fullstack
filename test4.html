@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Palindrome App</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="kokaneka">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+    body{
+
+      background-image: url(https://wallpaperaccess.com/full/2204472.jpg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"> </div>
+
+  <script type="text/babel">
+
+    const checkSentence = (sentence) => {
+
+      axios.post('http://localhost/test1.php', {
+        sentence
+      })
+      .then(response => {
+
+        let { data } = response;
+
+        if(data == "1") {
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'The sentence is palindarome!',
+          })
+
+        } else {
+
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: "The sentence isn't palindarome!",
+          })
+        }
+      })
+    }
+  
+    function App() {
+
+        const [sentence, setSentence] = React.useState('');
+
+        return (
+          <div className="container">
+              <div className="row">
+              <div className="offset-md-3 col-md-6">
+                <div class="card">
+                  
+                  <div class="card-header">
+                    Palindrome sentence validation
+                  </div>
+
+                  <div class="card-body">
+                    <form>
+                      <div className="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Sentence</label>
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          id="exampleInputEmail1" 
+                          aria-describedby="emailHelp" 
+                          onChange={e => setSentence(e.target.value)}
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <button 
+                          type="button"
+                          className={`btn btn-primary ${sentence.length == 0 ? 'disabled' : ''}`}
+                          onClick={() => checkSentence(sentence)}
+                        >
+                          Check
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+        )
+    }
+
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+    );
+
+  </script>
+
+  <script src="https://unpkg.com/react@16.13.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dataformsjs@4.0.1/js/react/jsxLoader.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

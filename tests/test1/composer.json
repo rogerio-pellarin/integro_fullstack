@@ -1,0 +1,15 @@
+{
+    "name": "keler/test1",
+    "authors": [
+        {
+            "name": "Kevin Ramirez",
+            "email": "kelerago@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "phpunit ."
+    }
+}
