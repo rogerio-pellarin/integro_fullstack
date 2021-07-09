@@ -3,9 +3,7 @@
 function is_palindrome(string $input) : string {
     //solve this method that says if the sentence is palindrome or not
     $input =  prepareString($input);
-    if($input === strrev($input))
-      return 'It is Palindrome';
-    return 'Not Palindrome';
+    return $input === strrev($input);
 }
 
 function prepareString(string $input) : string{

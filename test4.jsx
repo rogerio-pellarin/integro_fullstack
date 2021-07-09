@@ -14,9 +14,14 @@ function Palindrome() {
         const resp = await axios.post(URL, {
           phrase,
         });
-        setMessage(resp.message);
+        const message = resp.data.isPalindrome
+          ? "It is palindrome"
+          : "Not Palindrome";
+        setMessage(message);
       } catch (e) {
-        setMessage(e.message);
+        setMessage(
+          "It was not possible to perform this operation, please try again later."
+        );
       }
     },
     [phrase, setMessage]
@@ -45,4 +50,3 @@ function Palindrome() {
 }
 
 export default Palindrome;
-
