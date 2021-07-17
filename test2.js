@@ -9,7 +9,7 @@ const groupArray = (arr, size) => {
   return acc;
 };
 
-const apples = (arr,) => {
+const apples = (arr) => {
   return groupArray(groupArray(groupArray(arr, 4), 2), 2);
 }
 
