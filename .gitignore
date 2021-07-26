@@ -1,0 +1,7 @@
+# vendor
+/vendor
+
+# node modules, dist
+/node_modules
+/dist
+/coverage
