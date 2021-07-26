@@ -4,14 +4,17 @@
   "description": "- Create a FORK of this project\r - Create a BRANCH from your first name\r - Solve the tests below\r - COMMIT your changes and open a PULL REQUEST for the branch MASTER",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "webpack serve",
+    "test": "jest",
+    "jest_init": "jest --init"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ndsanchez/integro_fullstack.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Neil Sanchez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ndsanchez/integro_fullstack/issues"
