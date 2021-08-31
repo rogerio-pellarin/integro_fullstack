@@ -28,6 +28,7 @@ FROM
   LEFT JOIN customer cu ON uc.customer_id = cu.id
 WHERE
   date_part('year', age(us.birthdate)) > 18 AND
+  us.status = 1 AND
   cu.status = 1
 ORDER BY
   cu.name
