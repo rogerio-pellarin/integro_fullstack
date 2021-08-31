@@ -7,7 +7,7 @@ function clean($string) {
 
 function is_palindrome($input) {
   $inputCleaned = clean($input);
-
+  // Iterate maximum on the half of the array
   for($i = 0; $i < floor(strlen($inputCleaned) / 2); $i++) {
     if($inputCleaned[$i] !== $inputCleaned[strlen($inputCleaned) -1 - $i]) {
       return false;
