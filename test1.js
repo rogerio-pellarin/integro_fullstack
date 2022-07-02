@@ -16,7 +16,7 @@ const is_palindrome = (input) => {
   const reverse_array = Object.values(array).reverse();
 
   // Convert to string and check if it's a palindrome
-  console.log(array.join("") === reverse_array.join(""));
+  return array.join("") === reverse_array.join("");
 };
 
 const input =
