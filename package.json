@@ -1,0 +1,22 @@
+{
+  "name": "integro_fullstack",
+  "version": "1.0.0",
+  "description": "- Create a FORK of this project\r - Create a BRANCH from your first name\r - Solve the tests below\r - COMMIT your changes and open a PULL REQUEST for the branch MASTER",
+  "main": "test2.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grexon-hack/integro_fullstack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grexon-hack/integro_fullstack/issues"
+  },
+  "homepage": "https://github.com/grexon-hack/integro_fullstack#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
