@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Palindrome() {
-  const [palindromo, setPalindromo] = useState();
+  const [palindromo, setPalindromo] = useState('');
   const [answer, setAnswer] = useState(null);
 
   const handlerDispath = async () => {
