@@ -36,9 +36,6 @@ function createPackage(pkg, boxItemAmount, packageLength) {
 
   return newArray;
 }
-
-const pkgs = createPackage(apple, box, packages);
-console.log(pkgs)
 function assignFriend(pkgs, amount) {
   let arrayResult = [];
   let initialSlice = 0;
@@ -52,4 +49,6 @@ function assignFriend(pkgs, amount) {
   }
   return {...arrayResult};
 }
+
+const pkgs = createPackage(apple, box, packages);
 console.log(assignFriend(pkgs, packages));
