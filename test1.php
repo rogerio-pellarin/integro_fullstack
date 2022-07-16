@@ -1,7 +1,18 @@
 <?php
-
 function is_palindrome($input) {
-    //solve this method that says if the sentence is palindrome or not
+  $newInput = strtolower(str_replace([" ", ",", "."], "", $input));
+  $newInput = iconv( 'UTF-8', 'ASCII//TRANSLIT', $newInput );
+  if(strlen($input)<2){
+    return false;
+  }
+  else{
+    if($newInput == strrev($newInput)){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }
 
 $input = "Allí por la tropa portado, traído a ese paraje de maniobras, una tipa como capitán usar boina me dejara, pese a odiar toda tropa por tal ropilla";
